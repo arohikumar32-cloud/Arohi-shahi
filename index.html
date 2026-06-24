@@ -55,10 +55,32 @@ padding:15px;
 </style>
 </head>
 <body>
+  <style>
+.dark-mode{
+background:#121212;
+color:white;
+}
+
+.dark-mode section{
+background:#1e1e1e;
+color:white;
+}
+.dark-mode{
+background:#121212;
+color:white;
+}
+
+.dark-mode section{
+background:#1e1e1e;
+color:white;
+}    
+</style>
 <div id="top"></div>
   
 <header>
+  <button onclick="darkMode()">🌙 Dark Mode</button>
 <h1>Arohi Shahi Official</h1>
+  <button onclick="darkMode()">🌙 Dark Mode</button>
 <p>Welcome To My Personal Website</p>
 </header>
 
@@ -246,6 +268,10 @@ style="border-radius:50%;border:5px solid #0d47a1;">
 <footer>
 © 2026 Arohi Shahi Official
 </footer>
-
+<script>
+function darkMode() {
+document.body.classList.toggle("dark-mode");
+}
+</script>
 </body>
 </html>
