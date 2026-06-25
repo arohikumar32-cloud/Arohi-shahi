@@ -69,24 +69,41 @@ padding:15px;
 </head>
 <body>
   <style>
-.dark-mode{
-background:#121212;
-color:white;
+.gallery img{
+  cursor:pointer;
+  transition:0.3s;
 }
 
-.dark-mode section{
-background:#1e1e1e;
-color:white;
-}
-.dark-mode{
-background:#121212;
-color:white;
+.gallery img:hover{
+  transform:scale(1.05);
 }
 
-.dark-mode section{
-background:#1e1e1e;
-color:white;
-}    
+#lightbox{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+  text-align:center;
+  z-index:9999;
+}
+
+#lightbox img{
+  max-width:90%;
+  max-height:90%;
+  margin-top:30px;
+}
+
+#lightbox span{
+  position:absolute;
+  top:20px;
+  right:40px;
+  color:white;
+  font-size:40px;
+  cursor:pointer;
+}
 </style>
 <div id="top"></div>
   <header>
@@ -138,135 +155,137 @@ style="border-radius:50%;border:5px solid #0d47a1;">
 
 <section id="photos">
 <h2>Photo Gallery</h2>
-<a href="1740680807554.jpg" target="_blank">
+  <div class="gallery">
+<a href="1740680807554.jpg" 
 <img src="1740680807554.jpg" width="250">
 </a>
 
-<a href="IMG_20240607_020155.jpg" target="_blank">
+<a href="IMG_20240607_020155.jpg"
 <img src="IMG_20240607_020155.jpg" width="250">
 </a>
-<a href="IMG_20240910_015441_578.jpg" target="_blank">
+<a href="IMG_20240910_015441_578.jpg" 
 <img src="IMG_20240910_015441_578.jpg" width="250">
 </a>
 
-<a href="IMG_20241108_073551.jpg" target="_blank">
+<a href="IMG_20241108_073551.jpg" 
 <img src="IMG_20241108_073551.jpg" width="250">
 </a>
 
-<a href="IMG_20241108_075008.jpg" target="_blank">
+<a href="IMG_20241108_075008.jpg" 
 <img src="IMG_20241108_075008.jpg" width="250">
-  <a href="IMG_20241205_154932.jpg" target="_blank">
+  <a href="IMG_20241205_154932.jpg" 
 <img src="IMG_20241205_154932.jpg" width="250">
 </a>
-<a href="IMG_20241215_133621.jpg" target="_blank">
+<a href="IMG_20241215_133621.jpg"
 <img src="IMG_20241215_133621.jpg" width="250">
 </a>
 
-<a href="IMG_20250213_142144.jpg" target="_blank">
+<a href="IMG_20250213_142144.jpg"
 <img src="IMG_20250213_142144.jpg" width="250">
 </a>
 
-<a href="IMG_20250426_215315.jpg" target="_blank">
+<a href="IMG_20250426_215315.jpg"
 <img src="IMG_20250426_215315.jpg" width="250">
 </a>
 
-<a href="IMG_20250427_073120.jpg" target="_blank">
+<a href="IMG_20250427_073120.jpg" 
 <img src="IMG_20250427_073120.jpg" width="250">
 </a>
-  <a href="IMG_20250709_124709.jpg" target="_blank">
+  <a href="IMG_20250709_124709.jpg"
 <img src="IMG_20250709_124709.jpg" width="250">
 </a>
 
-<a href="IMG_20250709_124802.jpg" target="_blank">
+<a href="IMG_20250709_124802.jpg" 
 <img src="IMG_20250709_124802.jpg" width="250">
 </a>
 
-<a href="IMG_20250709_125319.jpg" target="_blank">
+<a href="IMG_20250709_125319.jpg" 
 <img src="IMG_20250709_125319.jpg" width="250">
 </a>
 
-<a href="IMG_20250717_163801.jpg" target="_blank">
+<a href="IMG_20250717_163801.jpg"
 <img src="IMG_20250717_163801.jpg" width="250">
 </a>
 
-<a href="IMG_20250917_085719.jpg" target="_blank">
+<a href="IMG_20250917_085719.jpg" 
 <img src="IMG_20250917_085719.jpg" width="250">
 </a>
 
-<a href="IMG_20251028_052328.jpg" target="_blank">
+<a href="IMG_20251028_052328.jpg" 
 <img src="IMG_20251028_052328.jpg" width="250">
 </a>
 
-<a href="IMG_20251103_090849.jpg" target="_blank">
+<a href="IMG_20251103_090849.jpg" 
 <img src="IMG_20251103_090849.jpg" width="250">
 </a>
 
-<a href="IMG_20251112_013213.jpg" target="_blank">
+<a href="IMG_20251112_013213.jpg" 
 <img src="IMG_20251112_013213.jpg" width="250">
 </a>
 
-<a href="IMG_20251112_013223.jpg" target="_blank">
+<a href="IMG_20251112_013223.jpg" 
 <img src="IMG_20251112_013223.jpg" width="250">
 </a>
 
-<a href="IMG_20251210_120520.jpg" target="_blank">
+<a href="IMG_20251210_120520.jpg"
 <img src="IMG_20251210_120520.jpg" width="250">
 </a>
 
-<a href="IMG_20251224_201645.jpg" target="_blank">
+<a href="IMG_20251224_201645.jpg" 
 <img src="IMG_20251224_201645.jpg" width="250">
 </a>
 
-<a href="IMG_20251225_060017.jpg" target="_blank">
+<a href="IMG_20251225_060017.jpg"
 <img src="IMG_20251225_060017.jpg" width="250">
 </a>
 
-<a href="IMG_20260301_115505.jpg" target="_blank">
+<a href="IMG_20260301_115505.jpg" 
 <img src="IMG_20260301_115505.jpg" width="250">
 </a>
 
-<a href="IMG_20260329_165828.jpg" target="_blank">
+<a href="IMG_20260329_165828.jpg"
 <img src="IMG_20260329_165828.jpg" width="250">
 </a>
 
-<a href="IMG_20260521_172457.jpg" target="_blank">
+<a href="IMG_20260521_172457.jpg"
 <img src="IMG_20260521_172457.jpg" width="250">
 </a>
 
-<a href="IMG-20240909-WA0032.jpg" target="_blank">
+<a href="IMG-20240909-WA0032.jpg" 
 <img src="IMG-20240909-WA0032.jpg" width="250">
 </a>
 
-<a href="IMG-20240909-WA0036.jpg" target="_blank">
+<a href="IMG-20240909-WA0036.jpg" 
 <img src="IMG-20240909-WA0036.jpg" width="250">
 </a>
 
-<a href="IMG-20251219-WA0004.jpg" target="_blank">
+<a href="IMG-20251219-WA0004.jpg"
 <img src="IMG-20251219-WA0004.jpg" width="250">
 </a>
 
-<a href="IMG-20260301-WA0011.jpg" target="_blank">
+<a href="IMG-20260301-WA0011.jpg"
 <img src="IMG-20260301-WA0011.jpg" width="250">
 </a>
-  <a href="Screenshot 2026-06-24 120855.jpg" target="_blank">
+  <a href="Screenshot 2026-06-24 120855.jpg"
 <img src="Screenshot 2026-06-24 120855.jpg" width="250">
 </a>
 
-<a href="Screenshot 2026-06-24 120931.jpg" target="_blank">
+<a href="Screenshot 2026-06-24 120931.jpg"
 <img src="Screenshot 2026-06-24 120931.jpg" width="250">
 </a>
 
-<a href="Screenshot 2026-06-24 121008.jpg" target="_blank">
+<a href="Screenshot 2026-06-24 121008.jpg" 
 <img src="Screenshot 2026-06-24 121008.jpg" width="250">
 </a>
 
-<a href="Screenshot 2026-06-24 121043.jpg" target="_blank">
+<a href="Screenshot 2026-06-24 121043.jpg"
 <img src="Screenshot 2026-06-24 121043.jpg" width="250">
 </a>
 
-<a href="Screenshot 2026-06-24 121103.jpg" target="_blank">
+<a href="Screenshot 2026-06-24 121103.jpg"
 <img src="Screenshot 2026-06-24 121103.jpg" width="250">
 </a>
+  </div>
 </section>
 
 <section id="videos">
@@ -330,9 +349,23 @@ allowfullscreen>
 © 2026 Arohi Shahi Official
 </footer>
 <script>
+  document.querySelectorAll(".gallery img").forEach(img=>{
+    img.onclick=function(){
+        document.getElementById("lightbox").style.display="block";
+        document.getElementById("lightbox-img").src=this.src;
+    }
+});
+
+function closeLightbox(){
+    document.getElementById("lightbox").style.display="none";
+}
 function darkMode() {
 document.body.classList.toggle("dark-mode");
 }
 </script>
+  <div id="lightbox">
+<span onclick="closeLightbox()">&times;</span>
+<img id="lightbox-img">
+</div>
 </body>
 </html>
